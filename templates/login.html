@@ -26,20 +26,16 @@
                 <img id="i1gbk" src="https://cdn.grapedrop.com/udf2d17da5fc744db88ec2c8dad39e396/ba7cbe4f4ba34925b6b8386bc0ffe91e_icons8--30_2.png"/>
             </div>
             </div>
-            <form method="post" id="ip4jh" data-redirect="" class="form">
+            <form method="post" action="{{ url_for('login') }}" id="ip4jh" data-redirect="" class="form">
             <div id="iu2ie" class="form-group">
                 <label id="i9qps" class="label"></label>
-                <input type="text" placeholder="Type your name here" name="firstname" id="i11sz" class="input"/>
+                <input type="text" placeholder="Type your name here" name="username" id="i11sz" class="input"/>
             </div>
             <div id="im0qj" class="form-group">
                 <input type="password" placeholder="Type your password here" name="password" id="iejjd" class="input"/>
             </div>
             <div id="icoqw" class="form-group">
-                <button type="submit" id="ia8pj" class="button">Send</button>
-            </div>
-            <div data-form-state="success" id="imx7y" class="state-success">Thanks! We received your request
-            </div>
-            <div data-form-state="error" id="iol11" class="state-error">An error occurred on processing your request, try again!
+                <button type="submit" value="login" id="ia8pj" class="button">Send</button>
             </div>
             </form>
         </div>
