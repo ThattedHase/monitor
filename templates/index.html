@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="ru"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title>Страница 1</title>
-    <link type="text/css" href="{{ url_for('static', filename='css/nicepage.css') }}" rel="stylesheet">
-    <link type="text/css" href="{{ url_for('static', filename='css/first.css') }}" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/nicepage.js') }}" defer=""></script>
-    <script class="u-script" type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}" defer=""></script>
-    
-    
-    
-    
-</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Страница 1">
-    <meta property="og:description" content="">
-    <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="Страница-1.html" data-home-page-title="Страница 1" data-path-to-root="../" class="u-body u-xl-mode" data-lang="ru">
-    <section class="u-clearfix u-section-1" id="sec-4a6b">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-palette-1-base u-radius-10 u-shape u-shape-round u-shape-1"></div>
-
-        <div class="u-grey-15 u-preserve-proportions u-shape u-shape-circle u-shape-2"></div>
-        
-        <p class="u-text u-text-body-alt-color u-text-default u-text-1">Авторизация</p>
-        <div class="u-palette-1-dark-2 u-shape u-shape-rectangle u-shape-3"></div>
-        <div class="u-palette-1-dark-2 u-shape u-shape-rectangle u-shape-4"></div>
-        <div class="u-palette-1-base u-preserve-proportions u-shape u-shape-rectangle u-shape-5"></div>
-        <div class="u-palette-1-base u-preserve-proportions u-shape u-shape-rectangle u-shape-6"></div>
-        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="{{ url_for('static', filename='img/1.png') }}" alt="" data-image-width="64" data-image-height="64">
-        <img class="u-image u-image-contain u-image-default u-preserve-proportions u-image-2" src="{{ url_for('static', filename='img/2.png') }}" alt="" data-image-width="30" data-image-height="30">
-      </div>
-    </section>
-    
-    
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link type="text/css" href="{{ url_for('static', filename='css/first.css') }}" rel="stylesheet">
+        <title>Система автоматического обновления расписания</title>
+    </head>
+    <body>
+        <div id="ib6g" class="gpd-box">
+            <div id="i80k" class="gpd-box">
+            <img id="i8jn" src="https://cdn.grapedrop.com/udf2d17da5fc744db88ec2c8dad39e396/f86679dbc8e54733aec550e1fa4ed09d_0_1.png"/>
+            </div>
+            <div id="i1xl" class="gpd-box">
+            </div>
+            <div id="iqar" class="gpd-text">
+            <strong>Авторизация</strong>
+            </div>
+            <div id="isy01" class="gpd-box">
+            <div id="iap34" class="gpd-box">
+                <img id="i5gvu" src="https://cdn.grapedrop.com/udf2d17da5fc744db88ec2c8dad39e396/b926f90ca93d468d94fdfef641fcc089_icons8--64_1.png"/>
+            </div>
+            </div>
+            <div id="inn4j" class="gpd-box">
+            <div id="i6c5k" class="gpd-box">
+                <img id="i1gbk" src="https://cdn.grapedrop.com/udf2d17da5fc744db88ec2c8dad39e396/ba7cbe4f4ba34925b6b8386bc0ffe91e_icons8--30_2.png"/>
+            </div>
+            </div>
+            <form method="post" id="ip4jh" data-redirect="" class="form">
+            <div id="iu2ie" class="form-group">
+                <label id="i9qps" class="label"></label>
+                <input type="text" placeholder="Type your name here" name="firstname" id="i11sz" class="input"/>
+            </div>
+            <div id="im0qj" class="form-group">
+                <input type="password" placeholder="Type your password here" name="password" id="iejjd" class="input"/>
+            </div>
+            <div id="icoqw" class="form-group">
+                <button type="submit" id="ia8pj" class="button">Send</button>
+            </div>
+            <div data-form-state="success" id="imx7y" class="state-success">Thanks! We received your request
+            </div>
+            <div data-form-state="error" id="iol11" class="state-error">An error occurred on processing your request, try again!
+            </div>
+            </form>
+        </div>
+    </body>
+</html>
