@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/montserrat');
 * {
   box-sizing: border-box;
 }
@@ -6,9 +7,9 @@ body {
 }
 body{
   margin:0 0 0 110px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Montserrat';
   font-size:25px;
-  font-weight:700;
+  font-weight:800;
   background-color:rgba(0,0,0,0);
 }
 .gpd-box{
@@ -43,9 +44,9 @@ body{
 }
 #iqar{
   margin:0 0 0 110px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat';
   font-size:25px;
-  font-weight:700;
+  font-weight:800;
   color:#ffffff;
 }
 #i1xl{
@@ -58,12 +59,14 @@ body{
   height:52px;
   margin:25px 0 0 49px;
   background-color:#071269;
+  border-radius: 15px;
 }
 #iap34{
   width:52px;
   height:52px;
   margin:-5px 0 0 0;
   background-color:#2635A9;
+  border-radius: 15px;
 }
 #i5gvu{
   color:black;
@@ -92,22 +95,27 @@ body{
   border:0.727273px solid rgba(0,0,0,0);
   margin: 20px 0 0 21px;
   transform: translateX(-4px) translateY(-0.5px);
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Montserrat';
   color:#ffffff;
 }
 #iejjd{
   margin: -5px 0 0 21px;
   background-color:rgba(255,255,255,0);
   border:0.727273px solid rgba(0,0,0,0);
+  font-family:'Montserrat';
 }
 #ia8pj{
-  margin:10px 0 0 3px;
-  width:135px;
-  height:43px;
-  font-size:23px;
-  font-family:Arial, Helvetica, sans-serif;
-  font-weight:700;
-  background-color:#2635A9;
+  border: 0;
+  border-radius: 5px;
+  background: #2635A9;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 20px;
+  margin: 22px 0 0 0px;
+  width: 168px;
+  height: 53px;
+  font-family: 'Montserrat';
+  font-weight: 800;
 }
 #im0qj{
   margin:64px 22px 0 -22px;
@@ -120,12 +128,14 @@ body{
   height:52px;
   margin:-5px 0 0 0;
   background-color:#2635A9;
+  border-radius: 15px;
 }
 #inn4j{
   width:294px;
   height:52px;
   margin:32px 0 0 49px;
   background-color:#071269;
+  border-radius: 15px;
 }
 #i1gbk{
   color:black;
@@ -203,4 +213,180 @@ body {
   bottom:0%;
   left:0%;
   margin:0 0 0 0;
+}
+
+  /* ВТОРАЯ СТРАНИЦА */
+.days-of-week-container {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.days-of-week-text {
+  color: #071689;
+  font-size: 30px;
+  font-family: 'Montserrat';
+  padding-top: var(--dl-space-space-threeunits);
+}
+.days-of-week-navlink {
+  display: contents;
+}
+.days-of-week-container1 {
+  flex: 0 0 auto;
+  width: 343px;
+  height: 110px;
+  display: flex;
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-twounits);
+  align-items: center;
+  margin-left: var(--dl-space-space-twounits);
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 16px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #B965C6;
+}
+.days-of-week-text1 {
+  color: #ffffff;
+  font-size: 25px;
+  font-family: "Montserrat-Bold";
+}
+.days-of-week-container2 {
+  flex: 0 0 auto;
+  width: 343px;
+  height: 110px;
+  display: flex;
+  align-self: flex-start;
+  margin-top: var(--dl-space-space-twounits);
+  align-items: center;
+  margin-left: var(--dl-space-space-twounits);
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 16px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #B965C6;
+}
+.days-of-week-text2 {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-family: "Montserrat-Bold";
+}
+.days-of-week-container3 {
+  top: 112px;
+  flex: 0 0 auto;
+  right: 32px;
+  width: 343px;
+  height: 110px;
+  display: flex;
+  position: absolute;
+  align-self: flex-end;
+  align-items: center;
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 16px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #B965C6;
+}
+.days-of-week-text3 {
+  color: #ffffff;
+  font-size: 25px;
+  font-family: "Montserrat-Bold";
+}
+.days-of-week-container4 {
+  top: 256px;
+  flex: 0 0 auto;
+  right: 32px;
+  width: 343px;
+  height: 110px;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-self: flex-end;
+  align-items: center;
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 16px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #B965C6;
+}
+.days-of-week-text4 {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-family: "Montserrat-Bold";
+}
+.days-of-week-container5 {
+  top: 112px;
+  flex: 0 0 auto;
+  left: 0px;
+  right: 0px;
+  width: 343px;
+  height: 110px;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 16px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #B965C6;
+}
+.days-of-week-text5 {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-family: "Montserrat-Bold";
+}
+.days-of-week-container6 {
+  top: 256px;
+  flex: 0 0 auto;
+  left: 0px;
+  right: 0px;
+  width: 343px;
+  height: 110px;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 16px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #B965C6;
+}
+.days-of-week-text6 {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-family: "Montserrat-Bold";
+}
+.days-of-week-container7 {
+  top: 400px;
+  flex: 0 0 auto;
+  left: 0px;
+  right: 0px;
+  width: 343px;
+  height: 110px;
+  margin: auto;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  border-style: dashed;
+  border-width: 0px;
+  border-radius: 16px;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #B965C6;
+}
+.days-of-week-text7 {
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-family: "Montserrat-Bold";
 }
