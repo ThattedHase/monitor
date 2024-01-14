@@ -51,19 +51,21 @@ def uploadtest1():
 
 @app.route('/uploadtest', methods=['POST'])
 def upload_file():
-    if 'file' not in request.files:
-        return 'Файл не выбран'
-    
-    file = request.files['file']
+    if 'file1' not in request.files or 'file2' not in request.files:
+        return render_template('result.html', filename1="файл не выбран", filename2="файл не выбран")
 
-    if file.filename == '':
-        return 'Файл не выбран'
+    file1 = request.files['file1']
+    file2 = request.files['file2']
+
+    if file1.filename == '' or file2.filename == '':
+        return render_template('result.html', filename1="файл не выбран", filename2="файл не выбран")
 
     # Можно сохранить файл в нужную директорию или обработать его по-другому
     # Пример сохранения в папку 'uploads' в текущей директории
-    file.save('D:\monitor\instance\time_table' + file.filename)
+    file1.save('D:/monitor/instance/time_table/' + file1.filename)
+    file2.save('D:/monitor/instance/time_table/' + file2.filename)
 
-    return 'Файл успешно загружен'
+    return render_template('result.html', filename1=file1.filename, filename2=file2.filename)
 
 if __name__ == '__main__':
     app.run(debug=True)

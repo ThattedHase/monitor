@@ -1,5 +1,27 @@
 @import url('https://fonts.cdnfonts.com/css/montserrat');
 
+.res_text
+{
+  color: #071689;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+
+}
+
+.res_text p
+{
+  font-size: 25px;
+}
+.imgres
+{
+  margin-top: 20px;
+}
+
 .component-понедельник-container {
   width: 100%;
   display: flex;
