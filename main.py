@@ -37,6 +37,10 @@ def login():
 def main():
     return render_template('main.html')
 
+@app.route('/main1')
+def main1():
+    return render_template('upload.html')
+
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS

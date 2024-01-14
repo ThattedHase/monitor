@@ -131,12 +131,17 @@
 }
 
 
-.shifts
+.con1
 {
   flex-direction: row;
   margin-top:12%;
 }
-.shifts1
+.con2
+{
+  flex-direction: row;
+  margin-top:5%;
+}
+.con3
 {
   flex-direction: row;
   margin-top:5%;
