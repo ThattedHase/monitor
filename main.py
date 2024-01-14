@@ -18,7 +18,7 @@ ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-users = {'иван': '1234','саня':'1234'}
+users = {'Ярослав': '1234','саня':'1234'}
 
 
 

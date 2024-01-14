@@ -118,7 +118,7 @@ body{
   font-weight: 800;
 }
 #im0qj{
-  margin:64px 22px 0 -22px;
+  margin:54px 22px 0 -22px;
 }
 #iu2ie{
   margin:-7px 25px 0 -17px;
@@ -229,7 +229,7 @@ body {
   color: #071689;
   font-size: 30px;
   font-family: 'Montserrat';
-  padding-top: var(--dl-space-space-threeunits);
+  padding-top: 32px;
 }
 .days-of-week-navlink {
   display: contents;
@@ -240,7 +240,7 @@ body {
   height: 110px;
   display: flex;
   align-self: flex-start;
-  margin-top: var(--dl-space-space-twounits);
+  margin-top: 43px;
   align-items: center;
   margin-left: var(--dl-space-space-twounits);
   border-style: dashed;
@@ -249,11 +249,12 @@ body {
   justify-content: center;
   text-decoration: none;
   background-color: #B965C6;
+  font-family: 'Montserrat';
 }
 .days-of-week-text1 {
   color: #ffffff;
   font-size: 25px;
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat";
 }
 .days-of-week-container2 {
   flex: 0 0 auto;
@@ -261,7 +262,7 @@ body {
   height: 110px;
   display: flex;
   align-self: flex-start;
-  margin-top: var(--dl-space-space-twounits);
+  margin-top: 34px;
   align-items: center;
   margin-left: var(--dl-space-space-twounits);
   border-style: dashed;
@@ -270,11 +271,12 @@ body {
   justify-content: center;
   text-decoration: none;
   background-color: #B965C6;
+  font-family: 'Montserrat';
 }
 .days-of-week-text2 {
   color: rgb(255, 255, 255);
   font-size: 25px;
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat";
 }
 .days-of-week-container3 {
   top: 112px;
@@ -292,11 +294,12 @@ body {
   justify-content: center;
   text-decoration: none;
   background-color: #B965C6;
+  font-family: 'Montserrat';
 }
 .days-of-week-text3 {
   color: #ffffff;
   font-size: 25px;
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat";
 }
 .days-of-week-container4 {
   top: 256px;
@@ -315,11 +318,12 @@ body {
   justify-content: center;
   text-decoration: none;
   background-color: #B965C6;
+  font-family: 'Montserrat';
 }
 .days-of-week-text4 {
   color: rgb(255, 255, 255);
   font-size: 25px;
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat";
 }
 .days-of-week-container5 {
   top: 112px;
@@ -338,11 +342,12 @@ body {
   justify-content: center;
   text-decoration: none;
   background-color: #B965C6;
+  font-family: 'Montserrat';
 }
 .days-of-week-text5 {
   color: rgb(255, 255, 255);
   font-size: 25px;
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat";
 }
 .days-of-week-container6 {
   top: 256px;
@@ -361,11 +366,12 @@ body {
   justify-content: center;
   text-decoration: none;
   background-color: #B965C6;
+  font-family: 'Montserrat';
 }
 .days-of-week-text6 {
   color: rgb(255, 255, 255);
   font-size: 25px;
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat";
 }
 .days-of-week-container7 {
   top: 400px;
@@ -384,9 +390,10 @@ body {
   justify-content: center;
   text-decoration: none;
   background-color: #B965C6;
+  font-family: 'Montserrat';
 }
 .days-of-week-text7 {
   color: rgb(255, 255, 255);
   font-size: 25px;
-  font-family: "Montserrat-Bold";
+  font-family: "Montserrat";
 }
