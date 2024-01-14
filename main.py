@@ -3,6 +3,10 @@ import os
 from flask import Flask, flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from flask import send_from_directory
+import os
+from flask import Flask, flash, request, redirect, url_for
+from werkzeug.utils import secure_filename
+
 
 
 
@@ -37,34 +41,29 @@ def login():
 def main():
     return render_template('main.html')
 
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+@app.route('/upload')
+def main1():
+    return render_template('upload.html')
 
-@app.route('/upload', methods=['POST'])
+@app.route('/uploadtest1')
+def uploadtest1():
+    return render_template('upl.html')
+
+@app.route('/uploadtest', methods=['POST'])
 def upload_file():
     if 'file' not in request.files:
-        flash('No file part')
-        return redirect(request.url)
-
+        return 'Файл не выбран'
+    
     file = request.files['file']
 
     if file.filename == '':
-        flash('No selected file')
-        return redirect(request.url)
+        return 'Файл не выбран'
 
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        flash('File successfully uploaded')  # Provide feedback to the user
-        return redirect(url_for('main'))
-    else:
-        flash('Invalid file format')  # Provide feedback to the user
-        return redirect(request.url)
+    # Можно сохранить файл в нужную директорию или обработать его по-другому
+    # Пример сохранения в папку 'uploads' в текущей директории
+    file.save('D:\monitor\instance\time_table' + file.filename)
 
-@app.route('/uploads/<name>')
-def download_file(name):
-    return send_from_directory(app.config["UPLOAD_FOLDER"], name)
+    return 'Файл успешно загружен'
 
 if __name__ == '__main__':
     app.run(debug=True)
