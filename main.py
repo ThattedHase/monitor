@@ -6,14 +6,15 @@ from flask import send_from_directory
 import os
 from flask import Flask, flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
-
+from flask import Flask, render_template, redirect, url_for
+from flask_login import LoginManager, login_required
 
 
 
 
 app = Flask(__name__)
 
-UPLOAD_FOLDER = '/instance/time_table'
+UPLOAD_FOLDER = 'D:/monitor/instance/time_table'
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -37,38 +38,69 @@ def login():
 
     return render_template('login.html')
 
+
+@login_required
 @app.route('/main')
 def main():
     return render_template('main.html')
 
+
+@login_required
 @app.route('/upload')
 def main1():
     return render_template('upload.html')
 
+@login_required
 @app.route('/uploadtest1')
 def uploadtest1():
     return render_template('upl.html')
 
+def create_folders():
+    # Create 'first' and 'second' folders if they don't exist
+    for folder_name in ['first', 'second']:
+        folder_path = os.path.join(app.config['UPLOAD_FOLDER'], folder_name)
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+
+def delete_existing_files():
+    # Delete existing files in 'first' and 'second' folders
+    for folder_name in ['first', 'second']:
+        folder_path = os.path.join(app.config['UPLOAD_FOLDER'], folder_name)
+        for filename in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+@login_required
 @app.route('/uploadtest', methods=['POST'])
 def upload_file():
+    # Create 'first' and 'second' folders
+    create_folders()
+
+    # Delete existing files
+    delete_existing_files()
+
+    # Check if files are present in the request
     if 'file1' not in request.files and 'file2' not in request.files:
         return render_template('result.html', filename1="файл не выбран", filename2="файл не выбран")
 
     file1 = request.files.get('file1')
     file2 = request.files.get('file2')
 
+    # Check if both files are not present
     if not file1 and not file2:
         return render_template('result.html', filename1="файл не выбран", filename2="файл не выбран")
-    elif not file1:
-        return render_template('result.html', filename1="файл не выбран", filename2=file2.filename)
-    elif not file2:
-        return render_template('result.html', filename1=file1.filename, filename2="файл не выбран")
 
-    # Можно сохранить файл в нужную директорию или обработать его по-другому
-    # Пример сохранения в папку 'uploads' в текущей директории
-    file1.save('D:/monitor/instance/time_table/' + file1.filename)
-    file2.save('D:/monitor/instance/time_table/' + file2.filename)
+    # Save files in 'first' and 'second' folders with their original names and extensions
+    file1_extension = secure_filename(file1.filename).split('.')[-1]
+    file2_extension = secure_filename(file2.filename).split('.')[-1]
+
+    file1_path = os.path.join(app.config['UPLOAD_FOLDER'], 'first', f'first.{file1_extension}')
+    file2_path = os.path.join(app.config['UPLOAD_FOLDER'], 'second', f'second.{file2_extension}')
+
+    file1.save(file1_path)
+    file2.save(file2_path)
 
     return render_template('result.html', filename1=file1.filename, filename2=file2.filename)
+
 if __name__ == '__main__':
     app.run(debug=True)
