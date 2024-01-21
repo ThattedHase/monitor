@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link type="text/css" href="{{ url_for('static', filename='css/upload.css') }}" rel="stylesheet">
+        <title>Система автоматического обновления расписания</title>
+    </head>
+    <body>
+        <div class = "res_text">
+            Файл успешно загружен
+            <p>{{ filename1 }};
+                {{ filename2 }}
+            </p>
+            <img src="{{url_for('static', filename='img/like.png')}}" class = "imgres"/>        
+        </div>
+        <a href="http://127.0.0.1:5000/main" class="component-понедельник-navlink">
+            <div class="component-понедельник-container4">
+              <span class="component-понедельник-text3">Назад к выбору дня недели</span>
+            </div>
+        </a>
+    </body>
+</html>
