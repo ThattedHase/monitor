@@ -42,18 +42,11 @@
   background-color: #071689;
 }
 .component-понедельник-container2 {
-  top: 0px;
-  flex: 0 0 auto;
-  left: 0px;
-  right: 0px;
-  width: 3px;
-  bottom: 0px;
-  height: 498px;
-  margin: auto;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  background-color: #071689;
+  margin: 0 0 0 -435px;
+  width: 343px;
+  height: 110px;
+  border-radius: 20px;
+  background-color: #B965C6;
 }
 .component-понедельник-text1 {
   color: #071689;
@@ -73,17 +66,10 @@
 }
 
 .component-понедельник-container3 {
-  flex: 0 0 auto;
+  margin: 0 0 0 -435px;
   width: 343px;
   height: 110px;
-  display: flex;
-  align-self: flex-start;
-  margin-top: 15px;
-  align-items: center;
-  margin-left: 280px;
-  border-color: rgba(120, 120, 120, 0.4);
   border-radius: 20px;
-  justify-content: center;
   background-color: #B965C6;
 }
 
