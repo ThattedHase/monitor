@@ -64,7 +64,7 @@
   background-color: #071689;
 }
 .component-понедельник-container2 {
-  margin: 0 0 0 -435px;
+  margin: -110 0 0 510px;
   width: 343px;
   height: 110px;
   border-radius: 20px;
@@ -150,6 +150,11 @@
   margin-top:5%;
 }
 .con3
+{
+  flex-direction: row;
+  margin-top:5%;
+}
+.con4
 {
   flex-direction: row;
   margin-top:5%;
