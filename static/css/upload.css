@@ -151,3 +151,16 @@
   flex-direction: row;
   margin-top:5%;
 }
+.con5
+{
+  flex-direction: row;
+  margin-top: 5%;
+}
+.component-понедельник-container1
+{
+  margin: -10px 0 0 -6px;
+  width: 343px;
+  height: 55px;
+  border-radius: 20px;
+  background-color: #B965C6;
+}
