@@ -49,22 +49,9 @@
   transform: translateX(-1px);
 }
 
-.component-понедельник-container1 {
-  top: -368px;
-  flex: 0 0 auto;
-  left: 0px;
-  right: 0px;
-  width: 893px;
-  bottom: 0px;
-  height: 3px;
-  margin: auto;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  background-color: #071689;
-}
+
 .component-понедельник-container2 {
-  margin: -110 0 0 510px;
+  margin: -175px 0 0 510px;
   width: 343px;
   height: 110px;
   border-radius: 20px;
