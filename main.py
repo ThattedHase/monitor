@@ -29,11 +29,10 @@ def login():
         username = request.form['username']
         password = request.form['password']
 
-        # Проверка наличия пользователя в "базе данных"
         if username in users and users[username] == password:
-            # Перенаправление на главную страницу после успешной аутентификации
             return redirect(url_for('main'))
         else:
+            flash('Login unsuccessful')
             return render_template('login.html')
 
     return render_template('login.html')
@@ -56,14 +55,12 @@ def uploadtest1():
     return render_template('upl.html')
 
 def create_folders():
-    # Create 'first' and 'second' folders if they don't exist
     for folder_name in ['first', 'second']:
         folder_path = os.path.join(app.config['UPLOAD_FOLDER'], folder_name)
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
 def delete_existing_files():
-    # Delete existing files in 'first' and 'second' folders
     for folder_name in ['first', 'second']:
         folder_path = os.path.join(app.config['UPLOAD_FOLDER'], folder_name)
         for filename in os.listdir(folder_path):
@@ -73,24 +70,19 @@ def delete_existing_files():
 @login_required
 @app.route('/uploadtest', methods=['POST'])
 def upload_file():
-    # Create 'first' and 'second' folders
     create_folders()
 
-    # Delete existing files
     delete_existing_files()
 
-    # Check if files are present in the request
     if 'file1' not in request.files and 'file2' not in request.files:
         return render_template('result.html', filename1="файл не выбран", filename2="файл не выбран")
 
     file1 = request.files.get('file1')
     file2 = request.files.get('file2')
 
-    # Check if both files are not present
     if not file1 and not file2:
         return render_template('result.html', filename1="файл не выбран", filename2="файл не выбран")
 
-    # Save files in 'first' and 'second' folders with their original names and extensions
     file1_extension = secure_filename(file1.filename).split('.')[-1]
     file2_extension = secure_filename(file2.filename).split('.')[-1]
 
