@@ -44,9 +44,9 @@
 }
 
 .vertical-line {
-  height: 60%;
+  height: 55%;
   width: 2px;
-  transform: translateX(-1px);
+  transform: translateY(-11px);
 }
 
 
@@ -81,6 +81,14 @@
   opacity:0;
 }
 
+.component-понедельник-text6
+{
+  color: #ffffff;
+  font-size: 24px;
+  font-family: "Montserrat";
+  font-weight: 800;
+}
+
 .component-понедельник-container3 {
   margin: 0 0 0 -435px;
   width: 343px;
@@ -88,8 +96,9 @@
   border-radius: 20px;
   background-color: #B965C6;
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 
 }
 
@@ -123,7 +132,6 @@
   border-color: rgba(120, 120, 120, 0.4);
   border-radius: 20px;
   margin-bottom: 15px;
-  flex-direction: row;
   justify-content: center;
   text-decoration: none;
   background-color: #071689;
@@ -141,7 +149,6 @@
   font-size: 24px;
   font-family: "Montserrat";
   font-weight: 800;
-
 }
 .component-понедельник-text5 {
   color: #071689;
