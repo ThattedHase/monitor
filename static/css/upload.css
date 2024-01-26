@@ -74,6 +74,11 @@
   margin-right:90px;
 }
 
+.con3 .component-понедельник-container3 input {
+  width: 25%;
+  height: 15%;
+}
+
 .component-понедельник-container3 {
   margin: 0 0 0 -435px;
   width: 343px;

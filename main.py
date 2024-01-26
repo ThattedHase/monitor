@@ -32,7 +32,6 @@ def login():
         if username in users and users[username] == password:
             return redirect(url_for('main'))
         else:
-            flash('Login unsuccessful')
             return render_template('login.html')
 
     return render_template('login.html')
