@@ -74,9 +74,11 @@
   margin-right:90px;
 }
 
-.con3 .component-понедельник-container3 input {
-  width: 25%;
-  height: 15%;
+.con3 .component-понедельник-container3 input,
+.con4 .component-понедельник-container2 input {
+  width: 343px;
+  height: 110px;
+  opacity:0;
 }
 
 .component-понедельник-container3 {
@@ -85,6 +87,10 @@
   height: 110px;
   border-radius: 20px;
   background-color: #B965C6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
 }
 
 .con5
@@ -159,6 +165,7 @@
 {
   flex-direction: row;
   margin-top:5%;
+
 }
 .con4
 {
