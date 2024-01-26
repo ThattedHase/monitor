@@ -74,6 +74,7 @@
   margin-right:90px;
 }
 
+<<<<<<< HEAD
 .con3 .component-понедельник-container3 input,
 .con4 .component-понедельник-container2 input {
   width: 343px;
@@ -89,12 +90,15 @@
   font-weight: 800;
 }
 
+=======
+>>>>>>> ef275df2102c1b1e3349db065c1a7f6d458f390c
 .component-понедельник-container3 {
   margin: 0 0 0 -435px;
   width: 343px;
   height: 110px;
   border-radius: 20px;
   background-color: #B965C6;
+<<<<<<< HEAD
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,6 +118,8 @@
   height: 55px;
   border-radius: 20px;
   background-color: #B965C6;
+=======
+>>>>>>> ef275df2102c1b1e3349db065c1a7f6d458f390c
 }
 
 .component-понедельник-navlink {
@@ -172,7 +178,6 @@
 {
   flex-direction: row;
   margin-top:5%;
-
 }
 .con4
 {
@@ -186,9 +191,19 @@
 }
 .component-понедельник-container1
 {
-  margin: -10px 0 0 -6px;
+  margin: -70px 0 0 15px;
   width: 343px;
   height: 55px;
   border-radius: 20px;
   background-color: #B965C6;
+}
+.component-понедельник-text6
+{
+  position: relative;
+  top: 25%;
+  left: 30%;
+  color: #ffffff;
+  font-size: 24px;
+  font-family: "Montserrat";
+  font-weight: 800;
 }
