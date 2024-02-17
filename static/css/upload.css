@@ -1,5 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/montserrat');
 
+.body
+{
+  margin: 0;
+}
+
 .res_text
 {
   color: #071689;
@@ -22,177 +27,52 @@
   margin-top: 20px;
 }
 
-.component-понедельник-container {
-  width: 100%;
+.container
+{
   display: flex;
-  overflow: auto;
-  min-height: 100vh;
+  justify-content: center;
+}
+.form
+{
+  width: 60vh;
+  height: auto;
+  background-color: #071689;
+  border-radius: 5vh;
+  display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: flex-start;
-}
-.horizontal-line, .vertical-line {
-  margin-top: 10%;
-  position: absolute;
-  background-color: #071689;
-}
-.horizontal-line {
-  width: 80%;
-  height: 2px;
-  top: 10%;
-  transform: translateY(-1px);
-}
-
-.vertical-line {
-  height: 55%;
-  width: 2px;
-  transform: translateY(-11px);
-}
-
-
-.component-понедельник-container2 {
-  margin: -175px 0 0 510px;
-  width: 343px;
-  height: 110px;
-  border-radius: 20px;
-  background-color: #B965C6;
-}
-.component-понедельник-text1 {
-  color: #071689;
-  font-size: 25px;
+  text-align: center;
   font-family: "Montserrat";
-  font-weight: 800;
-  margin-left:150px;
-  margin-right:150px;
+  font-weight: 700;
+  color:white;
+  font-size: 20px;
 }
-.component-понедельник-text2 {
-  color: #071689;
-  font-size: 25px;
+.login-logo
+{
+  width: 20%;
+  height: auto;
+}
+.input
+{
+  padding-left: 15px;
+  background-color: #071269;
+  border:none;
+  width: 60%;
+  height: 25px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   font-family: "Montserrat";
-  font-weight: 800;
-  margin-left:90px;
-  margin-right:90px;
+  font-weight: 700;
+  color:white;
+  font-size: 15px;
 }
 
-.con3 .component-понедельник-container3 input,
-.con4 .component-понедельник-container2 input {
-  width: 343px;
-  height: 110px;
-  opacity:0;
-}
-
-.component-понедельник-text6
+.input-img
 {
-  color: #ffffff;
-  font-size: 24px;
-  font-family: "Montserrat";
-  font-weight: 800;
+  width: 50px;
+  height: 50px;
 }
-
-
-.component-понедельник-container3 {
-  margin: 0 0 0 -435px;
-  width: 343px;
-  height: 110px;
-  border-radius: 20px;
-  background-color: #B965C6;
-}
-.con5
+.input-line
 {
-  flex-direction: row;
-  margin-top: 5%;
-}
-.component-понедельник-container1
-{
-  margin: -10px 0 0 -6px;
-  width: 343px;
-  height: 55px;
-  border-radius: 20px;
-  background-color: #B965C6;
-}
-
-.component-понедельник-navlink {
-  display: contents;
-}
-.component-понедельник-container4 {
-  flex: 0 0 auto;
-  left: 0px;
-  width: var(--dl-size-size-large);
-  bottom: 0px;
-  height: 52px;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  margin-left: 15px;
-  border-color: rgba(120, 120, 120, 0.4);
-  border-radius: 20px;
-  margin-bottom: 15px;
-  justify-content: center;
-  text-decoration: none;
-  background-color: #071689;
-}
-.component-понедельник-text3 {
-  color: #ffffff;
-  font-size: 24px;
-  font-family: "Montserrat";
-  padding: 15px;
-  font-weight: 800;
-}
-
-.component-понедельник-text4 {
-  color: #ffffff;
-  font-size: 24px;
-  font-family: "Montserrat";
-  font-weight: 800;
-}
-.component-понедельник-text5 {
-  color: #071689;
-  font-size: 24px;
-  font-family: "Montserrat";
-  font-weight: 800;
-}
-
-
-.con1
-{
-  flex-direction: row;
-  margin-top:12%;
-}
-.con2
-{
-  flex-direction: row;
-  margin-top:5%;
-}
-.con3
-{
-  flex-direction: row;
-  margin-top:5%;
-}
-.con4
-{
-  flex-direction: row;
-  margin-top:5%;
-}
-.con5
-{
-  flex-direction: row;
-  margin-top: 5%;
-}
-.component-понедельник-container1
-{
-  margin: -70px 0 0 15px;
-  width: 343px;
-  height: 55px;
-  border-radius: 20px;
-  background-color: #B965C6;
-}
-.component-понедельник-text6
-{
-  position: relative;
-  top: 25%;
-  left: 30%;
-  color: #ffffff;
-  font-size: 24px;
-  font-family: "Montserrat";
-  font-weight: 800;
+  display: block;
 }

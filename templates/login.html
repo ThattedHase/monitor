@@ -3,41 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <link type="text/css" href="{{ url_for('static', filename='css/first.css') }}" rel="stylesheet">
+        <link type="text/css" href="{{ url_for('static', filename='css/upload.css') }}" rel="stylesheet">
         <title>Система автоматического обновления расписания</title>
     </head>
     <body>
-        <div id="ib6g" class="gpd-box">
-            <div id="i80k" class="gpd-box">
-            <img id="i8jn" src="https://cdn.grapedrop.com/udf2d17da5fc744db88ec2c8dad39e396/f86679dbc8e54733aec550e1fa4ed09d_0_1.png"/>
+        <div class = "container">
+                <form method="post" action="{{ url_for('login') }}" class="form">
+                    <img src = "{{ url_for('static', filename='img/login-logo.png') }}" class ="login-logo">
+                    <p> Авторизация </p>
+                    <div class = "input-line">
+                        <img src = "{{ url_for('static', filename='img/login.png') }}" class ="input-img">
+                        <input type="text" placeholder="Введите логин" name="username" class="input">
+                    </div>
+                </form>
             </div>
-            <div id="i1xl" class="gpd-box">
-            </div>
-            <div id="iqar" class="gpd-text">
-            <strong>Авторизация</strong>
-            </div>
-            <div id="isy01" class="gpd-box">
-            <div id="iap34" class="gpd-box">
-                <img id="i5gvu" src="https://cdn.grapedrop.com/udf2d17da5fc744db88ec2c8dad39e396/b926f90ca93d468d94fdfef641fcc089_icons8--64_1.png"/>
-            </div>
-            </div>
-            <div id="inn4j" class="gpd-box">
-            <div id="i6c5k" class="gpd-box">
-                <img id="i1gbk" src="https://cdn.grapedrop.com/udf2d17da5fc744db88ec2c8dad39e396/ba7cbe4f4ba34925b6b8386bc0ffe91e_icons8--30_2.png"/>
-            </div>
-            </div>
-            <form method="post" action="{{ url_for('login') }}" id="ip4jh" data-redirect="" class="form">
-            <div id="iu2ie" class="form-group">
-                <label id="i9qps" class="label"></label>
-                <input type="text" placeholder="Введите логин" name="username" id="i11sz" class="input"/>
-            </div>
-            <div id="im0qj" class="form-group">
-                <input type="password" placeholder="Введите пароль" name="password" id="iejjd" class="input"/>
-            </div>
-            <div id="icoqw" class="form-group">
-                <button type="submit" value="login" id="ia8pj" class="button">Отправить</button>
-            </div>
-            </form>
         </div>
     </body>
 </html>
