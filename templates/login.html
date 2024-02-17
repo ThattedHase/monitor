@@ -8,13 +8,20 @@
     </head>
     <body>
         <div class = "container">
-                <form method="post" action="{{ url_for('login') }}" class="form">
-                    <img src = "{{ url_for('static', filename='img/login-logo.png') }}" class ="login-logo">
-                    <p> Авторизация </p>
-                    <div class = "input-line">
-                        <img src = "{{ url_for('static', filename='img/login.png') }}" class ="input-img">
-                        <input type="text" placeholder="Введите логин" name="username" class="input">
-                    </div>
+            <div class = "form">
+                <form method="post" action="{{ url_for('login') }}">
+                        <img src = "{{ url_for('static', filename='img/login-logo.png') }}" class ="login-logo">
+                        <p> Авторизация </p>
+                        <div class = "input-line">
+                            <img src = "{{ url_for('static', filename='img/login.png') }}" class ="input-img">
+                            <input type="text" placeholder="Введите логин" name="username" class="input">
+                        </div>
+                        <div class = "input-line">
+                            <img src = "{{ url_for('static', filename='img/password.png') }}" class ="input-img">
+                            <input type="password" placeholder="Введите пароль" name="password" class="input">
+                        </div>
+                        <a href = "/register" class = "link">Нет аккаунта? Зарегистрируйтесь</a>
+                        <button type="submit" class = "bt">Войти</button>
                 </form>
             </div>
         </div>
