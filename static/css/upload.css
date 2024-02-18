@@ -2,7 +2,13 @@
 
 .body
 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color:#071689;
   margin: 0;
+  display: flex;
+  justify-content: center;
+
 }
 
 .res_text
@@ -29,8 +35,13 @@
 
 .container
 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color:#071689;
   display: flex;
   justify-content: center;
+  margin-top: 60px;
+  
 }
 .form
 {
@@ -61,10 +72,11 @@
 }
 .input-line
 {
-  width: 110%;
+  width: 100%;
   display: flex;
   height: 30px;
   margin-bottom: 15px;
+  justify-content: center;
 }
 
 .input
@@ -95,8 +107,48 @@
   text-decoration: none;
   color:white;
   font-size: 13px;
+  transition: color 0.3s linear;
 }
-link:hover
+.link:hover
 {
-  color: rgb(237,237,237);
+  color: rgb(217, 217, 217);
+}
+.button-list
+{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.day_of_week
+{
+  width: 20vw;
+  height: 15vh;
+  margin: 15px;
+  background-color: #B965C6;
+  border: none;
+  border-radius: 15px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color:white;
+  
+}
+.content
+{
+  margin: 0;
+  position: absolute;
+  font-family: "Montserrat";
+  font-weight: 700;
+  color:#071689;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  
+}
+
+@media (max-width: 767px) {
+  .day_of_week {
+    width: 80vw; 
+    height: 10vh; 
+    margin: 10px; 
+  }
 }

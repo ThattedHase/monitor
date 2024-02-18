@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link type="text/css" href="{{ url_for('static', filename='css/upload.css') }}" rel="stylesheet">
+        <title>Система автоматического обновления расписания</title>
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "form">
+                <form method="post" action="{{ url_for('register') }}">
+                        <img src = "{{ url_for('static', filename='img/login-logo.png') }}" class ="login-logo">
+                        <p> Регистрация </p>
+                        <div class = "input-line">
+                            <img src = "{{ url_for('static', filename='img/login.png') }}" class ="input-img">
+                            <input type="text" placeholder="Придумайте логин" name="username" class="input">
+                        </div>
+                        <div class = "input-line">
+                            <img src = "{{ url_for('static', filename='img/password.png') }}" class ="input-img">
+                            <input type="password" placeholder="Придумайте пароль" name="password" class="input">
+                        </div>
+                        <a href = "/" class = "link">Уже есть аккаунт? Войдите</a>
+                        <button type="submit" class = "bt">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

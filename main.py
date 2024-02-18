@@ -1,40 +1,75 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, flash, redirect, url_for, send_from_directory, jsonify, session
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+from flask_sqlalchemy import SQLAlchemy
+from flask_caching import Cache
+from datetime import timedelta
 import os
-from flask import Flask, flash, request, redirect, url_for
 from werkzeug.utils import secure_filename
-from flask import send_from_directory
-import os
-from flask import Flask, flash, request, redirect, url_for
-from werkzeug.utils import secure_filename
-from flask import Flask, render_template, redirect, url_for
-from flask_login import LoginManager, login_required
+import pandas as pd
+
 
 
 
 
 app = Flask(__name__)
+app.static_folder = 'static'
+app.config['SECRET_KEY'] = '93422'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['UPLOAD_FOLDER'] = 'D:/monitor/instance/time_table'
 
-UPLOAD_FOLDER = 'D:/monitor/instance/time_table'
-ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg'}
+db = SQLAlchemy(app)
+bcrypt = Bcrypt(app)
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'
 
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+class User(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    password = db.Column(db.String(120), nullable=False)
 
-users = {'Ярослав': '1234','саня':'1234'}
-
-
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-
-        if username in users and users[username] == password:
+        username = request.form.get('username')
+        password = request.form.get('password')
+        
+        user = User.query.filter_by(username=username).first()
+        if user and bcrypt.check_password_hash(user.password, password):
+            login_user(user)
+            flash('Login successful!', 'success')
             return redirect(url_for('main'))
         else:
-            return render_template('login.html')
-
+            flash('Login failed. Check your username and password.', 'error')
+    
     return render_template('login.html')
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        
+
+        existing_user = User.query.filter_by(username=username).first()
+        if existing_user:
+            return redirect(url_for('register'))
+        
+        hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+        new_user = User(username=username, password=hashed_password)
+        db.session.add(new_user)
+        db.session.commit()
+        login_user(new_user)
+
+        
+        return redirect(url_for('main'))
+    
+    return render_template('register.html')
 
 
 @login_required
