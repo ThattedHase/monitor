@@ -35,6 +35,7 @@
 
 .container
 {
+
   font-family: "Montserrat";
   font-weight: 700;
   color:#071689;
@@ -134,16 +135,20 @@
 }
 .content
 {
+  width: 100vw;
   margin: 0;
   position: absolute;
   font-family: "Montserrat";
   font-weight: 700;
   color:#071689;
   display: flex;
+  justify-content: center;
   text-align: center;
   flex-direction: column;
-  
+  flex-wrap: wrap;
 }
+
+
 
 @media (max-width: 767px) {
   .day_of_week {
@@ -151,4 +156,68 @@
     height: 10vh; 
     margin: 10px; 
   }
+}
+
+.subcontent
+{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.content-block
+{
+  width: 40%;
+  background-color:rgb(237, 237, 237);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 50px;
+  margin: 40px;
+  flex-direction: column;
+}
+
+.input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 14px;
+	vertical-align: middle;
+	color: rgb(255 255 255);
+	text-align: center;
+	border-radius: 4px;
+	background-color:rgb(185, 101, 198);
+	line-height: 22px;
+	height: 40px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+ 
+
+.input-file:hover span {
+	background-color: rgb(200, 44, 228);
+}
+.input-file:active span {
+	background-color: rgb(200, 44, 228);
+}
+
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
 }

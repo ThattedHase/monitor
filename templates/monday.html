@@ -9,15 +9,21 @@
     <body>
         <div class = "content">
             Выберите день недели
-            <div class = "button-list">
-                <button class = "day_of_week">ПОНЕДЕЛЬНИК</button>
-                <button class = "day_of_week">ВТОРНИК</button>
-                <button class = "day_of_week">СРЕДА</button>
-                <button class = "day_of_week">ЧЕТВЕРГ</button>
-                <button class = "day_of_week">ПЯТНИЦА</button>
-                <button class = "day_of_week">СУББОТА</button>
-                <button class = "day_of_week">ВОСКРЕСЕНЬЕ</button>
-            </div>
+            <form action="/uploadtest" method="post" enctype="multipart/form-data">
+                <div class = "subcontent">
+                    <div class = "content-block">
+                        <p>Первая смена</p>
+                        <label class="input-file">
+                            <input type="file" name="file">		
+                            <span>Выберите файл</span>
+                        </label>
+                    </div>
+                    <div class = "content-block">
+                        <p>Вторая смена</p>
+                        <input type="file" name="file2" class = "file-block" accept=".png, .pdf, .jpg, .jpeg">>
+                    </div>
+                </div>
+            </form>
         </div>     
     </body>
 </html>

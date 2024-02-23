@@ -77,6 +77,11 @@ def register():
 def main():
     return render_template('main.html')
 
+@login_required
+@app.route('/monday')
+def monday():
+    return render_template('monday.html')
+
 
 @login_required
 @app.route('/upload')
