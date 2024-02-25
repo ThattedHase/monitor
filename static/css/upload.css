@@ -180,53 +180,53 @@
 }
 
 .input-file {
-	position: relative;
-	display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 .input-file span {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-	outline: none;
-	text-decoration: none;
-	font-size: 24px;
-	vertical-align: middle;
-	color: rgb(255 255 255);
-	text-align: center;
-	border-radius: 16px;
-	background-color:rgb(185, 101, 198);
-	line-height: 22px;
-	height: 110px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  font-size: 24px;
+  vertical-align: middle;
+  color: rgb(255 255 255);
+  text-align: center;
+  border-radius: 16px;
+  background-color:rgb(185, 101, 198);
+  line-height: 22px;
+  height: 110px;
   width: 343px;
-	padding: 40px 20px;
-	box-sizing: border-box;
-	border: none;
-	margin: 0;
-	transition: background-color 0.2s;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  transition: background-color 0.2s;
 }
 .input-file input[type=file] {
-	position: absolute;
-	z-index: -1;
-	opacity: 0;
-	display: block;
-	width: 0;
-	height: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  display: block;
+  width: 0;
+  height: 0;
 }
  
 
 .input-file:hover span {
-	background-color: rgb(200, 44, 228);
+  background-color: rgb(200, 44, 228);
 }
 .input-file:active span {
-	background-color: rgb(200, 44, 228);
+  background-color: rgb(200, 44, 228);
 }
 
 .input-file input[type=file]:disabled + span {
-	background-color: #eee;
+  background-color: #eee;
 }
 .upload
 {
-	background-color:rgb(185, 101, 198);
+  background-color:rgb(185, 101, 198);
   border: none;
   border-radius: 16px;
   color:rgb(255, 255, 255);
@@ -239,5 +239,22 @@
 
 }
 .upload:hover  {
-	background-color: rgb(200, 44, 228);
+  background-color: rgb(200, 44, 228);
+}
+
+.input-file-list {
+  padding: 10px 0;
+  font-size: 15px;
+
+}
+.input-file-list-item {
+  margin-bottom: 10px;
+}
+
+.input-file-list-remove {
+  color: red;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 5px;
+
 }

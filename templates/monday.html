@@ -17,9 +17,10 @@
                                 margin: 20px 0px 40px 0px;
                                 ">Первая смена</p>
                         <label class="input-file">
-                            <input type="file" name="file">		
+                            <input type="file" name="file1">    
                             <span>Выберите файл</span>
                         </label>
+                        <div class="input-file-list"></div>  
                     </div>
                     <div class = "content-block">
                         <p style="
@@ -27,13 +28,45 @@
                         margin: 20px 0px 40px 0px; 
                         ">Вторая смена</p>
                         <label class="input-file">
-                            <input type="file" name="file">		
+                            <input type="file" name="file2">    
                             <span>Выберите файл</span>
                         </label>
+                        <div class="input-file-list"></div>  
                     </div>
                 </div>
                 <button class = "upload" type="submit">Загрузить</button>
             </form>
         </div>     
     </body>
+    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        var dt = new DataTransfer();
+        
+        $('.input-file input[type=file]').on('change', function(){
+            let $files_list = $(this).closest('.input-file').next();
+            $files_list.empty();
+        
+            for(var i = 0; i < this.files.length; i++){
+                let new_file_input = '<div class="input-file-list-item">' +
+                    '<span class="input-file-list-name">' + this.files.item(i).name + '</span>' +
+                    '<a href="#" onclick="removeFilesItem(this); return false;" class="input-file-list-remove">x</a>' +
+                    '</div>';
+                $files_list.append(new_file_input);
+                dt.items.add(this.files.item(i));
+            };
+            this.files = dt.files;
+        });
+        
+        function removeFilesItem(target){
+            let name = $(target).prev().text();
+            let input = $(target).closest('.input-file-row').find('input[type=file]');  
+            $(target).closest('.input-file-list-item').remove();  
+            for(let i = 0; i < dt.items.length; i++){
+                if(name === dt.items[i].getAsFile().name){
+                    dt.items.remove(i);
+                }
+            }
+            input[0].files = dt.files;  
+        }
+    </script>
 </html>
