@@ -12,17 +12,27 @@
             <form action="/uploadtest" method="post" enctype="multipart/form-data">
                 <div class = "subcontent">
                     <div class = "content-block">
-                        <p>Первая смена</p>
+                        <p style="
+                                font-size: 24px;
+                                margin: 20px 0px 40px 0px;
+                                ">Первая смена</p>
                         <label class="input-file">
                             <input type="file" name="file">		
                             <span>Выберите файл</span>
                         </label>
                     </div>
                     <div class = "content-block">
-                        <p>Вторая смена</p>
-                        <input type="file" name="file2" class = "file-block" accept=".png, .pdf, .jpg, .jpeg">>
+                        <p style="
+                        font-size: 24px;
+                        margin: 20px 0px 40px 0px; 
+                        ">Вторая смена</p>
+                        <label class="input-file">
+                            <input type="file" name="file">		
+                            <span>Выберите файл</span>
+                        </label>
                     </div>
                 </div>
+                <button class = "upload" type="submit">Загрузить</button>
             </form>
         </div>     
     </body>

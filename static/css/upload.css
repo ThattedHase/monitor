@@ -135,6 +135,7 @@
 }
 .content
 {
+  font-size: 24px;
   width: 100vw;
   margin: 0;
   position: absolute;
@@ -167,12 +168,13 @@
 
 .content-block
 {
-  width: 40%;
+  height: 376px;
+  width: 404px;
   background-color:rgb(237, 237, 237);
   display: flex;
   justify-content: center;
   text-align: center;
-  border-radius: 50px;
+  border-radius: 43px;
   margin: 40px;
   flex-direction: column;
 }
@@ -187,15 +189,16 @@
 	cursor: pointer;
 	outline: none;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 24px;
 	vertical-align: middle;
 	color: rgb(255 255 255);
 	text-align: center;
-	border-radius: 4px;
+	border-radius: 16px;
 	background-color:rgb(185, 101, 198);
 	line-height: 22px;
-	height: 40px;
-	padding: 10px 20px;
+	height: 110px;
+  width: 343px;
+	padding: 40px 20px;
 	box-sizing: border-box;
 	border: none;
 	margin: 0;
@@ -220,4 +223,21 @@
 
 .input-file input[type=file]:disabled + span {
 	background-color: #eee;
+}
+.upload
+{
+	background-color:rgb(185, 101, 198);
+  border: none;
+  border-radius: 16px;
+  color:rgb(255, 255, 255);
+  font-size: 24px;
+  width: 343px;
+  height: 55px;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 700;
+
+}
+.upload:hover  {
+	background-color: rgb(200, 44, 228);
 }
