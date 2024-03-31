@@ -87,7 +87,8 @@ def main():
 @login_required
 @app.route('/monday')
 def monday():
-    return render_template('monday.html')
+    a = 'UPLOAD_FOLDER1'
+    return render_template('monday.html',a=a)
 
 
 @login_required
@@ -131,6 +132,7 @@ def delete_existing_files2(a):
             
 @login_required
 @app.route('/uploadtest1', methods=['POST'])
+
 def upload_file1(a):
     create_folders1(a)
     delete_existing_files1(a)
