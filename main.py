@@ -16,7 +16,14 @@ app = Flask(__name__)
 app.static_folder = 'static'
 app.config['SECRET_KEY'] = '93422'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-app.config['UPLOAD_FOLDER'] = 'D:/monitor/instance/time_table'
+app.config['UPLOAD_FOLDER1'] = 'D:/monitor/instance/time_table/monday'
+app.config['UPLOAD_FOLDER2'] = 'D:/monitor/instance/time_table'
+app.config['UPLOAD_FOLDER3'] = 'D:/monitor/instance/time_table'
+app.config['UPLOAD_FOLDER4'] = 'D:/monitor/instance/time_table'
+app.config['UPLOAD_FOLDER5'] = 'D:/monitor/instance/time_table'
+app.config['UPLOAD_FOLDER6'] = 'D:/monitor/instance/time_table'
+app.config['UPLOAD_FOLDER7'] = 'D:/monitor/instance/time_table'
+
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
@@ -93,45 +100,82 @@ def main1():
 def uploadtest1():
     return render_template('upl.html')
 
-def create_folders():
-    for folder_name in ['first', 'second']:
-        folder_path = os.path.join(app.config['UPLOAD_FOLDER'], folder_name)
+def create_folders1(a):
+    for folder_name in ['first']:
+        folder_path = os.path.join(app.config[a], folder_name)
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
-def delete_existing_files():
-    for folder_name in ['first', 'second']:
-        folder_path = os.path.join(app.config['UPLOAD_FOLDER'], folder_name)
+def create_folders2(a):
+    for folder_name in ['second']:
+        folder_path = os.path.join(app.config[a], folder_name)
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+
+def delete_existing_files1(a):
+    for folder_name in ['first']:
+        folder_path = os.path.join(app.config[a], folder_name)
         for filename in os.listdir(folder_path):
             file_path = os.path.join(folder_path, filename)
             if os.path.isfile(file_path):
                 os.remove(file_path)
+
+
+def delete_existing_files2(a):
+    for folder_name in ['second']:
+        folder_path = os.path.join(app.config[a], folder_name)
+        for filename in os.listdir(folder_path):
+            file_path = os.path.join(folder_path, filename)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+            
 @login_required
-@app.route('/uploadtest', methods=['POST'])
-def upload_file():
-    create_folders()
+@app.route('/uploadtest1', methods=['POST'])
+def upload_file1(a):
+    create_folders1(a)
+    delete_existing_files1(a)
 
-    delete_existing_files()
-
-    if 'file1' not in request.files and 'file2' not in request.files:
-        return render_template('result.html', filename1="файл не выбран", filename2="файл не выбран")
 
     file1 = request.files.get('file1')
-    file2 = request.files.get('file2')
-
-    if not file1 and not file2:
-        return render_template('result.html', filename1="файл не выбран", filename2="файл не выбран")
-
     file1_extension = secure_filename(file1.filename).split('.')[-1]
+    print(file1)
+    
+    if not file1:
+        filename1 = "файл не выбран"
+    else:
+        filename1 = file1.filename
+        file1_path = os.path.join(app.config[a], 'first', f'first.{file1_extension}')
+        file1.save(file1_path)
+    
+    
+    return render_template('result.html', filename=filename1)
+
+@login_required
+@app.route('/uploadtest2', methods=['POST'])
+def upload_file2(a):
+    create_folders2(a)
+    delete_existing_files2(a)
+
+
+    file2 = request.files.get('file2')
     file2_extension = secure_filename(file2.filename).split('.')[-1]
+    print(file2)
+    
+    if not file2:
+        filename2 = "файл не выбран"
+    else:
+        filename2 = file2.filename
+        file2_path = os.path.join(app.config[a], 'second', f'second.{file2_extension}')
+        file2.save(file2_path)
+        
+    return render_template('result.html', filename=filename2)
 
-    file1_path = os.path.join(app.config['UPLOAD_FOLDER'], 'first', f'first.{file1_extension}')
-    file2_path = os.path.join(app.config['UPLOAD_FOLDER'], 'second', f'second.{file2_extension}')
 
-    file1.save(file1_path)
-    file2.save(file2_path)
+    
 
-    return render_template('result.html', filename1=file1.filename, filename2=file2.filename)
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+    
+
