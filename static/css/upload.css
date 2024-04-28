@@ -256,5 +256,13 @@
   text-decoration: none;
   display: inline-block;
   margin-left: 5px;
-
+}
+.button-back{
+  background-color: #071689;
+  color: white;
+  padding: 15px;
+  border:none;
+  border-radius: 15px;
+  font-family: "Montserrat";
+  font-weight: 500;
 }
