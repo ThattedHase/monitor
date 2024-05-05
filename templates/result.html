@@ -9,13 +9,16 @@
     <body>
         <div class = "res_text">
             Файл успешно загружен
-            <p>{{ filename1 }};
-                {{ filename2 }}
+            <p>{{ filename }}
             </p>
             <img src="{{url_for('static', filename='img/like.png')}}" class = "imgres"/>        
         </div>
+<<<<<<< HEAD
         <a href="http://127.0.0.1:5000/main" class="component-понедельник-navlink">
             <button class = "go_back">Назад к выбору дня недели</button>
         </a>
+=======
+        <button onclick="window.history.go(-1)" class="button-back">Назад</button>
+>>>>>>> 44de2402b0f52204aaab25589ede99713a71bb43
     </body>
 </html>
