@@ -131,7 +131,7 @@
   font-family: "Montserrat";
   font-weight: 700;
   color:white;
-  
+  font-size: 18px;
 }
 .content
 {
@@ -239,6 +239,24 @@
 
 }
 .upload:hover  {
+<<<<<<< HEAD
+	background-color: rgb(200, 44, 228);
+}
+.go_back {
+  margin: 15px;
+  background-color:#071269;
+  color:rgb(255, 255, 255);
+  border: none;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 16px;
+  bottom: 15px;
+  left: 15px;
+  border-radius: 11px;
+  width: 284px;
+  height: 52px;
+=======
   background-color: rgb(200, 44, 228);
 }
 
@@ -265,4 +283,5 @@
   border-radius: 15px;
   font-family: "Montserrat";
   font-weight: 500;
+>>>>>>> 44de2402b0f52204aaab25589ede99713a71bb43
 }
